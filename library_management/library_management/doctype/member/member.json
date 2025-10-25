@@ -1,0 +1,216 @@
+{
+    "actions": [],
+    "autoname": "naming_series:",
+    "creation": "2025-10-25 20:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "first_name",
+        "last_name",
+        "full_name",
+        "column_break_1",
+        "email",
+        "phone",
+        "date_of_birth",
+        "section_break_2",
+        "address_line_1",
+        "address_line_2",
+        "column_break_3",
+        "city",
+        "state",
+        "postal_code",
+        "country",
+        "section_break_3",
+        "membership_type",
+        "membership_start_date",
+        "membership_end_date",
+        "column_break_4",
+        "is_active",
+        "user",
+        "max_books_allowed"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "LIB-MEM-.YYYY.-",
+            "reqd": 1
+        },
+        {
+            "fieldname": "first_name",
+            "fieldtype": "Data",
+            "in_global_search": 1,
+            "in_list_view": 1,
+            "label": "First Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "last_name",
+            "fieldtype": "Data",
+            "in_global_search": 1,
+            "label": "Last Name"
+        },
+        {
+            "fieldname": "full_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Full Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "in_global_search": 1,
+            "in_standard_filter": 1,
+            "label": "Email",
+            "options": "Email",
+            "unique": 1
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "date_of_birth",
+            "fieldtype": "Date",
+            "label": "Date of Birth"
+        },
+        {
+            "fieldname": "section_break_2",
+            "fieldtype": "Section Break",
+            "label": "Address"
+        },
+        {
+            "fieldname": "address_line_1",
+            "fieldtype": "Data",
+            "label": "Address Line 1"
+        },
+        {
+            "fieldname": "address_line_2",
+            "fieldtype": "Data",
+            "label": "Address Line 2"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City"
+        },
+        {
+            "fieldname": "state",
+            "fieldtype": "Data",
+            "label": "State/Province"
+        },
+        {
+            "fieldname": "postal_code",
+            "fieldtype": "Data",
+            "label": "Postal Code"
+        },
+        {
+            "fieldname": "country",
+            "fieldtype": "Data",
+            "label": "Country",
+            "default": "United States"
+        },
+        {
+            "fieldname": "section_break_3",
+            "fieldtype": "Section Break",
+            "label": "Membership Details"
+        },
+        {
+            "fieldname": "membership_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Membership Type",
+            "options": "Standard\\nPremium\\nStudent\\nSenior",
+            "default": "Standard",
+            "reqd": 1
+        },
+        {
+            "fieldname": "membership_start_date",
+            "fieldtype": "Date",
+            "label": "Membership Start Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "membership_end_date",
+            "fieldtype": "Date",
+            "label": "Membership End Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Is Active",
+            "default": 1
+        },
+        {
+            "fieldname": "user",
+            "fieldtype": "Link",
+            "label": "Linked User",
+            "options": "User",
+            "description": "Link to Frappe User for portal access"
+        },
+        {
+            "fieldname": "max_books_allowed",
+            "fieldtype": "Int",
+            "label": "Max Books Allowed",
+            "default": 5
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-10-25 20:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Library Management",
+    "name": "Member",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Librarian",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "if_owner": 1,
+            "read": 1,
+            "role": "Library Member"
+        }
+    ],
+    "quick_entry": 1,
+    "search_fields": "full_name,email,phone",
+    "show_name_in_global_search": 1,
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "full_name",
+    "track_changes": 1
+}
